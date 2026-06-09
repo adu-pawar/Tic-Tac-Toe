@@ -1,0 +1,109 @@
+* {
+  background-color: rgb(173, 206, 244);
+}
+.box {
+  display: grid;
+  height: 610px;
+  width: 610px;
+  background-color: rgb(0, 0, 0);
+  margin: 30px auto; /* Centers the whole grid on the page */
+  border: 2px solid black;
+  box-sizing: border-box; /* Prevents border from adding extra width */
+
+  /* Forces the 3 columns to split the 610px perfectly with NO gaps */
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+
+  /* Ensure these are NOT set to anything higher than 0px */
+  gap: 0;
+  padding: 0;
+}
+#box1 {
+  height: 200px;
+  width: 200px;
+  background: white;
+}
+#box2 {
+  height: 200px;
+  width: 200px;
+
+  background: white;
+}
+#box3 {
+  height: 200px;
+  width: 200px;
+
+  background: white;
+}
+#box4 {
+  height: 200px;
+  width: 200px;
+
+  background: white;
+}
+#box5 {
+  height: 200px;
+  width: 200px;
+
+  background: white;
+}
+#box6 {
+  height: 200px;
+  width: 200px;
+
+  background: white;
+}
+#box7 {
+  height: 200px;
+  width: 200px;
+
+  background: white;
+}
+#box8 {
+  height: 200px;
+  width: 200px;
+
+  background: white;
+}
+#box9 {
+  height: 200px;
+  width: 200px;
+
+  background: white;
+}
+.x,
+.o{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    background-color: white;
+}
+
+.x::before,
+.x::after{
+    content: "";
+    position: absolute;
+    width: 12px;
+    height: 150px;
+    background-color: red;
+    top: 25px;
+    left: 94px;
+}
+
+.x::before{
+    transform: rotate(45deg);
+}
+
+.x::after{
+    transform: rotate(-45deg);
+}
+.o::before{
+    content: "";
+    position: absolute;
+    width: 130px;
+    height: 130px;
+    border: 12px solid blue;
+    border-radius: 50%;
+    top: 25px;
+    left: 25px;
+}
