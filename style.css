@@ -3,19 +3,20 @@
 }
 .box {
   display: grid;
-  height: 610px;
-  width: 610px;
-  background-color: rgb(0, 0, 0);
+  height: 60%;
+  width: 60%;
+  /* background-color: rgb(0, 0, 0); */
   margin: 30px auto; /* Centers the whole grid on the page */
-  border: 2px solid black;
+  /* border: 2px solid black; */
   box-sizing: border-box; /* Prevents border from adding extra width */
 
   /* Forces the 3 columns to split the 610px perfectly with NO gaps */
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
 
+
   /* Ensure these are NOT set to anything higher than 0px */
-  gap: 0;
+  gap: 10px;
   padding: 0;
 }
 #box1 {
