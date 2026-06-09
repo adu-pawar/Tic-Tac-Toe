@@ -11,14 +11,12 @@ let btn = document.querySelector(".oxbox");
 let clickCount = 0;
 this.addEventListener("click", function () {
   clickCount++;
-  console.log(clickCount);
 });
 
 function ox() {
-  if (this.className == "x" || this.className== "o") {
-    this.className=""
-    this.innerText = "";
-  } else if(this.innerText=="") {
+  if (this.className == "x" || this.className == "o") {
+    this.className = "";
+  } else if (this.innerText == "") {
     let click = 0;
     if (clickCount % 2 == 0) {
       click = 1;
@@ -32,7 +30,23 @@ function ox() {
     }
   }
 }
+function reset(event) {
+  // event.stopPropagation();
+ btn1.className = "";
+ btn2.className = "";
+ btn3.className = "";
+ btn4.className = "";
+ btn5.className = "";
+ btn6.className = "";
+ btn7.className = "";
+ btn8.className = "";
+ btn9.className = "";
+}
+// reset function
+let rest = document.querySelector("#reset");
+rest.addEventListener("click", reset);
 
+//ox function call
 btn1.addEventListener("click", ox);
 btn2.addEventListener("click", ox);
 btn3.addEventListener("click", ox);
